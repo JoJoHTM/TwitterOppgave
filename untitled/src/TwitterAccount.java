@@ -53,8 +53,8 @@ public class TwitterAccount {
 
     public int getRetweetCount() {
         int total = 0;
-        for (int i = 0; i < this.tweets.size(); i++) {
-            total += this.tweets.get(i).getRetweetCount();
+        for (Tweet tweet : this.tweets) {
+            total += tweet.getRetweetCount();
         }
         return total;
     }
